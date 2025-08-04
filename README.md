@@ -7,6 +7,34 @@ Enhance the existing Vendor Management System built with Next.js and Material-UI
 - [Next.js](https://nextjs.org/) - React framework
 - [Material-UI](https://mui.com/) - UI component library
 - [React](https://reactjs.org/) - JavaScript library
+- *Backend*: [Supabase] (PostgreSQL + Auth + Storage)
+- **npm install**
+
+
+A responsive web application for managing vendor requests and approvals built using **Next.js**, **Supabase**, and **React Context API**. This system supports two roles—**Admins** and **Users**—with role-based views, document uploads, analytics, and real-time request tracking.
+
+## 🌿 Features
+
+### 🧑‍💼 User Functionality
+- Submit new vendor requests via a sleek form
+- Required fields: organization info, contact, city, state, delivery date, and supplies
+- File upload support (tax documentation, etc.)
+- See personal submissions in **My Requests**
+- Edit or delete own requests inline
+- Update files or attached documents
+- View real-time approval and completion status
+
+### 🛠 Admin Functionality
+- View all vendor requests in **All Vendor Requests**
+- Filter, search, and sort by request details (except city/state/email—search only)
+- Mark requests as approved and complete
+- Set start dates for approved vendors
+- Export all requests to CSV
+- View live analytics in **Admin Analytics**
+  - Approval rate, completion rate, total requests
+  - Breakdowns by city/state/email
+  - Filterable and sortable analytics table
+
 
 ## Task 1: Improve Responsiveness and Aesthetics
 ### Objective
