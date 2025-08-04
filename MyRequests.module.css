@@ -1,0 +1,322 @@
+.page {
+  background-image: url('/my-vend-request.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 60px 20px;
+  font-family: 'Inter', 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.page::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255, 255, 255, 0.65);
+  z-index: -1;
+}
+
+.heading {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #111, #333);
+  background-clip: text;               /* ✅ Add this */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 30px;
+  text-align: center;
+  max-width: 720px;
+  line-height: 1.6;
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 540px;
+  padding: 14px 24px;
+  font-size: 1.05rem;
+  border-radius: 35px;
+  border: 1px solid #c4c4c4;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.searchBar:focus {
+  outline: none;
+  border-color: #30c638;
+  box-shadow: 0 0 10px rgba(48, 198, 56, 0.3);
+}
+
+.submitAnotherBtn {
+  background-color: #30c638;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submitAnotherBtn:hover {
+  background-color: #28a32a;
+}
+
+/* TABLE WRAPPER */
+.table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  font-size: 1rem;
+}
+
+/* Ensure full width inside scroll container */
+.table table {
+  min-width: 1000px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 14px 20px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+  vertical-align: middle;
+}
+
+.table th {
+  background-color: #f5f7f6;
+  color: #222;
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+}
+
+.table td {
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9fdfb;
+}
+
+.table tr:hover {
+  background-color: #f0f9f2;
+}
+
+.table input {
+  max-width: 100%;
+  width: 140px;
+  padding: 6px 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.table button {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.table button:hover {
+  opacity: 0.85;
+}
+
+.button {
+  background-color: #30c638;
+  color: white;
+  padding: 6px 12px;
+  margin: 2px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  border: none;
+}
+
+.button:hover {
+  background-color: #269b2c;
+}
+
+.button.delete {
+  background-color: #f44336;
+}
+
+.button.delete:hover {
+  background-color: #c62828;
+}
+
+.link {
+  color: #5a2ecc;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #3c1ba8;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .table table {
+    min-width: 900px;
+  }
+
+  .heading {
+    font-size: 2.2rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+  }
+
+  .submitAnotherBtn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .table input {
+    width: 120px;
+  }
+}
+
+.submitAnotherBtn {
+  background-color: #30c638;
+  color: white;
+  border: none;
+  padding: 12px 26px;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  letter-spacing: 0.5px;
+}
+
+.submitAnotherBtn:hover {
+  background-color: #28a32a;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 420px) {
+  .tableContainer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scrollableTable {
+    min-width: 1000px;
+    font-size: 0.75rem;
+  }
+
+  .scrollableTable th,
+  .scrollableTable td {
+    padding: 0.6rem 0.5rem;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+  }
+
+  .pagination button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .searchBar {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .submitBtn {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: block;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  font-size: 1rem;
+  white-space: nowrap; /* ⬅️ Prevents field stacking */
+}
+
+.table table {
+  min-width: 1000px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 14px 20px;
+  text-align: left;
+  border-bottom: 1px solid #eaeaea;
+  vertical-align: middle;
+  white-space: nowrap; /* ⬅️ Ensures rows don't stack */
+}
+
+.table input {
+  width: 140px;
+  padding: 6px 10px;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  white-space: nowrap;
+}

@@ -1,0 +1,178 @@
+.pageBackground {
+  background-image: url('/imagebkg.webp');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7); /* slightly darker for better contrast */
+  padding: 3rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  width: 100%;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.formBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.heading {
+  font-size: 2.9rem;
+  font-weight: 800; /* bolder */
+  margin-bottom: 1.2rem;
+  text-align: center;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.5px;
+}
+
+.subtext {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #f3f3f3;
+  max-width: 95%;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1.4rem;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form input[type="file"] {
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+  background-color: #fff;
+  color: #222;
+  font-weight: 600;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.form input:focus {
+  outline: none;
+  box-shadow: 0 0 10px #4be487;
+}
+
+.fileLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #dddddd;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.fileInput {
+  margin-top: 0.4rem;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  font-weight: 600;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.fileInput:focus {
+  outline: none;
+  box-shadow: 0 0 10px #4be487;
+}
+
+.submitButton {
+  background-color: #34d058;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.submitButton:hover {
+  background-color: #2ca94a;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 500px) {
+  .overlay {
+    padding: 2rem 1rem;
+  }
+
+  .heading {
+    font-size: 2.1rem;
+  }
+
+  .subtext {
+    font-size: 1.05rem;
+  }
+
+  .submitButton {
+    font-size: 1rem;
+  }
+}
+
+.toast {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  animation: fadeInOutToast 2s ease-in-out;
+  z-index: 9999;
+}
+
+@keyframes fadeInOutToast {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.dateInput {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #30c638;
+  box-shadow: 0 0 6px rgba(48, 198, 56, 0.3);
+}
